@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(11, 12, 19);
+}
+
+
+
+hr {
+    /*    <-------   linea divisora*/
+    height: 1px;
+    /* Define el grosor de la línea */
+    background-color: #ffffff;
+    /* Cambia el color de la línea, puedes personalizarlo */
+    width: 90%;
+    /* Asegura que ocupe el 100% del ancho */
+    margin-bottom: 50px;
+}
+
+/*-----------efectos de puntos-----------------*/
+
+/* Canvas de fondo */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* Ajusta según necesites */
+}
+
+
+/*-----------MENU-----------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #05040ee1;
+    padding: 10px 20px;
+    color: #ffffff;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/*-----------BANNER-----------------*/
+.banner {
+    padding: 50px;
+    height: 500px;
+    /* Ajusta la altura según sea necesario */
+    position: center;
+    /* Necesario para posicionar el texto */
+    overflow: hidden;
+    /* Asegura que el contenido no desborde */
+    background-color: #7d8592;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    /* Aplica esquinas redondeadas a la imagen */
+}
+
+/*texto del baner*/
+.banner-content p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    /* Centra el texto */
+    color: white;
+    /* Cambia el color del texto para que sea visible */
+    font-size: 24px;
+    /* Ajusta el tamaño de la fuente */
+    font-weight: bold;
+    /* Hace que el texto sea más destacado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Agrega sombra para mejor visibilidad */
+    margin: 0;
+    /* Elimina márgenes del texto */
+    z-index: 1;
+    /* Asegura que el texto esté por encima de la imagen */
+}
+
+/*-----------CERVICIOS-----------------*/
+
+.container {
+    /* <----   contenedor general*/
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 600px;
+    flex-direction: column
+}
+
+.sub_titulo {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.contenedor_cervicos {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.contenedor_card {
+    background-color: #7d8592;
+    color: #ffffff;
+    width: 25%;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contenedor_card p { /*  <------  *texto de la carta*/
+    font-size: 25px;
+    margin-bottom: 0px;
+    
+}
+
+.icon {
+    width: 100%;
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+/*-------------HORARIO---------------*/
+
+.contenedor_horario {
+    background-color: #7d8592;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 50%;
+    justify-content: center
+}
+
+.contenedor_horario span {
+    font-size: 50px;
+    flex: 1;
+    text-align: center;
+}
+
+.days-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px 40px;
+    /* Ajusta el espacio interno */
+    border-radius: 15px;
+    font-size: 16px;
+    min-width: 200px;
+    /* Establece un ancho mínimo opcional */
+}
+
+.contenedor_dias {
+    display: flex;
+    gap: 20px;
+}
+
+.contenedor_hora {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px 40px;
+    /* Ajusta el espacio interno */
+    border-radius: 15px;
+    min-width: 500px;
+    /* Establece un ancho mínimo opcional */
+}
+
+/*-------------ANUNCIOS---------------*/
+/* From Uiverse.io by mrpumps31232 */
+.loading-wave {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.loading-bar {
+    width: 20px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #3498db;
+    border-radius: 5px;
+    animation: loading-wave-animation 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-bar:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.loading-bar:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loading-wave-animation {
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 50px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+/*----------------------PIE DE PAGINA-----------------------*/
+/* Estilo general del pie de página */
+.footer {
+    background-color: #212b3a;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    min-width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #171924;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f39c12;
+}
+
+/* Estilo para la parte inferior del pie de página */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
