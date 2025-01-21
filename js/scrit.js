@@ -40,7 +40,7 @@ function dibujarLinea(bola1, bola2) {
   ctx.beginPath();
   ctx.moveTo(bola1.x, bola1.y);
   ctx.lineTo(bola2.x, bola2.y);
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.2)";
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.99)";
   ctx.lineWidth = 1;
   ctx.stroke();
   ctx.closePath();

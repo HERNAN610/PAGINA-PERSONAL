@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento</title>
-
-    <link rel="stylesheet" href="./styles.css">
-
-    <!--efectos de puntos---->
+    <!------------------efectos------------------>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
 
 
     <link rel="icon" href="./img/logo/download.ico">
@@ -18,8 +18,8 @@
     <!--efectos de puntos-->
 
     <canvas id="canvas"></canvas>
-    <script src="bola.js"></script>
-    <script src="scrit.js"></script>
+    <script src="./js/bola.js"></script>
+    <script src="./js/scrit.js"></script>
 
     <!----------------------------------MENU----------------------------------------------------->
     <header class="header">
@@ -28,21 +28,34 @@
                 <img src="./img/logo/logo web owl-logic negro.svg" alt="Logo">
             </div>
         </a>
-
+    
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- Icono del menú hamburguesa -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    
+        <!-- Menú de navegación -->
         <nav class="nav">
             <a href="#servicios">SERVICIOS</a>
             <a href="#">QUIEN SOY</a>
             <a href="#contacto">CONTACTO</a>
-            <a href="#contacto">BLOG</a>
+            <a href="#blog">BLOG</a>
         </nav>
     </header>
+    
+    
     <!----------------------------------BANNER----------------------------------------------------->
 
     <section class="banner">
 
         <div class="banner-content">
             <img src="./img/baner/˚⭑· ͟͟͞͞➳ ᴬⁱ ᴬʳᵗ.jpg" alt="">
-            <p>Your Text Here</p>
+            <p>Donde la creatividad y la tecnología se unen para dar vida a tus ideas, ofreciendo soluciones innovadoras y personalizadas.</p>
         </div>
     </section>
     <!----------------------------------CERVICIOS----------------------------------------------------->
@@ -52,7 +65,7 @@
         <div class="contenedor_cervicos">
 
             <div class="contenedor_card">
-                <img src="./img/elementos/t.webp" alt="Service Icon" class="icon">
+                <img src="./img/elementos/mantenimieto de pc.webp" alt="Service Icon" class="icon">
 
                 <p>
                     "Rendimiento al máximo, problemas al mínimo."
@@ -61,7 +74,7 @@
             </div>
 
             <div class="contenedor_card">
-                <img src="./img/elementos/t.webp" alt="Service Icon" class="icon">
+                <img src="./img/elementos/imprecion 3d.webp" alt="Service Icon" class="icon">
                 <p>
                     "Dale vida a tus ideas en 3D." "Innovación que toma forma."
                 </p>
@@ -89,9 +102,10 @@
 
             </div>
 
-            <div class="contenedor_hora">
+            <div class="days-box">
                 <span>9:00 am - 5:00 pm</span>
             </div>
+
         </div>
     </div>
 

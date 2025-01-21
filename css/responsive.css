@@ -1,0 +1,144 @@
+/* ----------------------RESPONSIVE----------------------- */
+
+@media (max-width: 1024px) {
+    .banner-content p {
+        font-size: 24px;
+        max-width: 70%;
+    }
+
+    .contenedor_card {
+        width: 45%;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+}
+/*--------------tamaño de telefono---------------*/
+@media (max-width: 768px) {
+
+
+    /*-----------MENU-----------------*/
+    /* Ocultar el menú principal */
+    .nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #05040ee1;
+        padding: 10px;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    /* Mostrar el menú al activar el checkbox */
+    .menu-toggle:checked ~ .nav {
+        display: flex;
+        z-index: 1;
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Animación del icono */
+    .menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /*-----------BANNER-----------------*/
+    .banner-content p {
+        font-size: 20px;
+        max-width: 90%;
+    }
+
+    .banner  {
+        display: flex;
+        flex-direction: column;
+        flex-direction: row
+    }
+
+    .banner-content p {
+        font-size: 20px;
+        max-width: 90%;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /*-----------CERVICIOS-----------------*/
+    .contenedor_cervicos{
+        display: flex;
+        align-items: center;
+        flex-direction: column
+        
+    }
+    .contenedor_card {
+        width: 80%;
+        
+    }
+    
+
+    /*-----------HORAIO-----------------*/
+    .days-box {
+        margin: 5px;
+    }
+    .contenedor_horario span {
+        font-size: 100px;
+        padding: 25px;
+        flex: 1;
+        text-align: center;
+    }
+
+    .contenedor_horario {
+        padding: 30px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+
+    /*otros*/
+    .container {
+        display: flex; /* Asegura que los hijos se alineen */
+        margin: 0;
+        height: auto;
+        padding-top: 100px; /* Margen interno del contenedor */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 300px;
+        padding: 20px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .sub_titulo {
+        font-size: 30px;
+    }
+
+    .contenedor_horario span {
+        font-size: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

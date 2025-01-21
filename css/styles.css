@@ -27,7 +27,8 @@ canvas {
     left: 0;
     width: 100%;
     height: auto;
-    z-index: -1; /* Ajusta según necesites */
+    z-index: -1;
+    /* Ajusta según necesites */
 }
 
 
@@ -39,12 +40,14 @@ canvas {
     background-color: #05040ee1;
     padding: 10px 20px;
     color: #ffffff;
+    position: relative;
 }
 
 .logo img {
     height: 50px;
 }
 
+/* Estilos del menú */
 .nav {
     display: flex;
     gap: 15px;
@@ -58,16 +61,34 @@ canvas {
     border-radius: 5px;
 }
 
+/* Ocultar el menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 /*-----------BANNER-----------------*/
 .banner {
     padding: 50px;
     height: 500px;
-    /* Ajusta la altura según sea necesario */
-    position: center;
-    /* Necesario para posicionar el texto */
     overflow: hidden;
-    /* Asegura que el contenido no desborde */
     background-color: #7d8592;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner-content {
@@ -81,28 +102,25 @@ canvas {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    /* Aplica esquinas redondeadas a la imagen */
 }
 
-/*texto del baner*/
 .banner-content p {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -50%);
-    /* Centra el texto */
+    bottom: 20px;
+    /* Posiciona el texto en la parte inferior */
+    left: 20px;
+    /* Posiciona el texto a la izquierda */
+    max-width: 45%;
+    /* Limita el ancho del texto */
     color: white;
-    /* Cambia el color del texto para que sea visible */
-    font-size: 24px;
-    /* Ajusta el tamaño de la fuente */
+    font-size: 30px;
+    /*tamaño de letra*/
     font-weight: bold;
-    /* Hace que el texto sea más destacado */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Agrega sombra para mejor visibilidad */
     margin: 0;
-    /* Elimina márgenes del texto */
     z-index: 1;
-    /* Asegura que el texto esté por encima de la imagen */
+    white-space: normal;
+    /* Permite que el texto se ajuste dentro del contenedor */
 }
 
 /*-----------CERVICIOS-----------------*/
@@ -141,29 +159,32 @@ canvas {
     text-align: center;
 }
 
-.contenedor_card p { /*  <------  *texto de la carta*/
+.contenedor_card p {
+    /*  <------  *texto de la carta*/
     font-size: 25px;
     margin-bottom: 0px;
-    
+
 }
 
 .icon {
     width: 100%;
-    max-width: 80px;
+    max-width: 150px;
     margin-bottom: 10px;
 }
 
 /*-------------HORARIO---------------*/
+
+
 
 .contenedor_horario {
     background-color: #7d8592;
     padding: 70px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    align-items: stretch;
+    /* Asegura que los elementos hijos se estiren */
     height: 50%;
-    justify-content: center
+    justify-content: center;
 }
 
 .contenedor_horario span {
@@ -172,33 +193,24 @@ canvas {
     text-align: center;
 }
 
+.contenedor_dias {
+    display: flex;
+    flex: 1;
+    /* Asegura que las cajas ocupen el mismo espacio */
+}
+
 .days-box {
+    flex: 1;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 10px;
+    /* Espacio entre las celdas */
+    border-radius: 0px;
+    /*radio del contenedor*/
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 40px 40px;
-    /* Ajusta el espacio interno */
-    border-radius: 15px;
-    font-size: 16px;
-    min-width: 200px;
-    /* Establece un ancho mínimo opcional */
-}
-
-.contenedor_dias {
-    display: flex;
-    gap: 20px;
-}
-
-.contenedor_hora {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 40px 40px;
-    /* Ajusta el espacio interno */
-    border-radius: 15px;
-    min-width: 500px;
-    /* Establece un ancho mínimo opcional */
+    font-size: 24px;
 }
 
 /*-------------ANUNCIOS---------------*/
@@ -308,3 +320,5 @@ canvas {
 .footer-bottom p {
     margin: 0;
 }
+
+
