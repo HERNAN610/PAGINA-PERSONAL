@@ -20,19 +20,29 @@ window.addEventListener("resize", () => {
 });
 
 // Número de bolas y configuración
-const numBolitas = 100;
+var numBolitas = 100;
 const bolitas = [];
 const radioBola = 4; // Radio de las bolitas
 const colorBola = "white"; // Color de las bolitas
 
+// Ajusta el número de bolitas dependiendo del tamaño de la ventana
+function ajustarNumBolitas() {
+  if (window.innerWidth < 768) { // Para pantallas pequeñas (móviles, tablets)
+    numBolitas = 50; // Valor para pantallas pequeñas
+  } else {
+    numBolitas = 100; // Valor para pantallas grandes (escritorios)
+  }
+}
+
 // Inicializa las bolitas
 function inicializarBolitas() {
   bolitas.length = 0; // Vacía el arreglo para reiniciar
+  ajustarNumBolitas(); // Ajusta el número de bolitas
   for (let i = 0; i < numBolitas; i++) {
     let x = Math.random() * (canvas.width - radioBola * 2) + radioBola;
     let y = Math.random() * (canvas.height - radioBola * 2) + radioBola;
     bolitas.push(new Bola(x, y)); // Asegúrate de que la clase Bola esté definida en bola.js
-  }
+}
 }
 
 // Dibuja una línea entre dos bolitas
