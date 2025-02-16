@@ -23,7 +23,7 @@ window.addEventListener("resize", () => {
 var numBolitas = 100;
 const bolitas = [];
 const radioBola = 4; // Radio de las bolitas
-const colorBola = "white"; // Color de las bolitas
+const colorBola ="rgb(22, 45, 63)"; // <---------------------Color de las bolitas
 
 // Ajusta el número de bolitas dependiendo del tamaño de la ventana
 function ajustarNumBolitas() {
@@ -50,7 +50,7 @@ function dibujarLinea(bola1, bola2) {
   ctx.beginPath();
   ctx.moveTo(bola1.x, bola1.y);
   ctx.lineTo(bola2.x, bola2.y);
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.99)";
+  ctx.strokeStyle = "rgb(11, 30, 46)";// <---------------------Color de las lineas//
   ctx.lineWidth = 1;
   ctx.stroke();
   ctx.closePath();

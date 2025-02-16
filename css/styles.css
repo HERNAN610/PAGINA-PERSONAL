@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -41,7 +44,9 @@ canvas {
     padding: 10px 20px;
     color: #ffffff;
     position: relative;
+
 }
+
 
 .logo img {
     height: 50px;
@@ -137,39 +142,44 @@ canvas {
     flex-direction: column
 }
 
-.sub_titulo {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
 
-.contenedor_cervicos {
+
+
+.gallery {
     display: flex;
-    justify-content: center;
-
     gap: 20px;
+    flex-wrap: wrap;
+    
+    justify-content: space-around
 }
 
-.contenedor_card {
-    background-color: #7d8592;
-    color: #ffffff;
-    width: 25%;
+.card {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto del contenedor padre */
+    display: block; /* Hace que todo el área sea clickeable */
+
+    background: #7d8592;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 20px;
     text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.contenedor_card p {
-    /*  <------  *texto de la carta*/
-    font-size: 25px;
-    margin-bottom: 0px;
-
+.card:hover {
+    transform: scale(1.05);
 }
 
-.icon {
-    width: 100%;
-    max-width: 150px;
-    margin-bottom: 10px;
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*-------------HORARIO---------------*/
