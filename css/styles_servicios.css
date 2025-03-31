@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(11, 12, 19);
+}
+
+
+
+hr {
+    /*    <-------   linea divisora*/
+    height: 1px;
+    /* Define el grosor de la línea */
+    background-color: #ffffff;
+    /* Cambia el color de la línea, puedes personalizarlo */
+    width: 90%;
+    /* Asegura que ocupe el 100% del ancho */
+    margin-bottom: 50px;
+}
+
+/*-----------efectos de puntos-----------------*/
+
+/* Canvas de fondo */
+canvas {
+    position: absolute;
+
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    /* Ajusta según necesites */
+}
+
+
+/*-----------MENU-----------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #05040ee1;
+    padding: 10px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Estilos del menú */
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Ocultar el menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+
+
+/*-----------CERVICIO MANTENIMIETO-----------------*/
+
+.container {
+    /* <----   contenedor general*/
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 600px;
+    flex-direction: column
+}
+
+.sub_titulo {
+    display: flex;
+    font-size: 40px;
+    
+    margin-top: 0;
+    margin-bottom: 10px;
+    
+}
+
+/*diviciones de cervicio*/
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+}
+
+/*FIN DE = diviciones de cervicio*/
+
+.parent p {
+    font-size: 20px;
+    white-space: pre-line;
+    text-align: left;
+    padding-left: 50px;
+    margin: 0;
+}
+
+/*-------------------pestañas*/
+
+.tab-area {
+    width: 100%;
+    margin: 0;
+
+}
+
+
+.tab-link {
+    text-transform: arial;
+    /*<---------tipo de letra*/
+    font-size: 1em;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    float: left;
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+    background: #212b3a;
+
+}
+
+.tab-link:hover {
+    background: #e8edf7;
+}
+
+.tab-link:nth-of-type(1) {
+    margin-left: 20px;
+}
+
+.tab-link:hover {
+    color: #0000008e;
+}
+
+.tab {
+    align-content: center;
+    clear: both;
+    background: #7d8592;
+    padding: 50px;
+    display: none;
+    width: auto;
+    min-height: 400px;
+
+}
+
+.target-fix {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+@media only screen and (max-width: 1150px) {
+    .tab-area {
+        width: 100%;
+        margin: 0;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .tab-area {
+        width: 100%;
+        margin: 0 0 0;
+        float: left;
+    }
+
+    .intro {
+        margin: 50px 0;
+    }
+}
+
+.tabs-focus .tab-link:focus,
+.tabs-hover .tab-link:hover,
+#tabC:target~a:nth-of-type(3),
+#tabB:target~a:nth-of-type(2),
+#tabC:not(:target)~#tabB:not(:target)~a:nth-of-type(1),
+#tab-C:checked~label:nth-of-type(3),
+#tab-B:checked~label:nth-of-type(2),
+#tab-B:not(:checked)~#tab-C:not(:checked)~label:nth-of-type(1) {
+    background: #7d8592;
+}
+
+.tabs-focus .tab-link:focus:after,
+.tabs-hover .tab-link:hover:after,
+#tabC:target~a:nth-of-type(3):after,
+#tabB:target~a:nth-of-type(2):after,
+#tabC:not(:target)~#tabB:not(:target)~a:nth-of-type(1):after,
+#tab-C:checked~label:nth-of-type(3):after,
+#tab-B:checked~label:nth-of-type(2):after,
+#tab-B:not(:checked)~#tab-C:not(:checked)~label:nth-of-type(1):after {
+    position: absolute;
+    content: "";
+    margin: 5px 0 0 0;
+    width: 55px;
+    height: 1px;
+    display: block;
+}
+
+
+/* Target Tabs */
+.tabs-target span:nth-of-type(1):not(:target)~span:nth-of-type(2):not(:target)~.tab:nth-of-type(1),
+.tabs-target span:nth-of-type(2):target~.tab:nth-of-type(2),
+.tabs-target span:nth-of-type(1):target~.tab:nth-of-type(3) {
+    display: block;
+}
+
+
+/*-------------TRABAJOS ANTERIORES---------------*/
+
+.loading-wave {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.loading-bar {
+    width: 20px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #3498db;
+    border-radius: 5px;
+    animation: loading-wave-animation 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-bar:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.loading-bar:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loading-wave-animation {
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 50px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+/*----------------------PIE DE PAGINA-----------------------*/
+/* Estilo general del pie de página */
+.footer {
+    background-color: #212b3a;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    min-width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #171924;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+/* Estilo para la parte inferior del pie de página */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
